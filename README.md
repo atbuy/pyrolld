@@ -5,7 +5,7 @@ A package to generate color sequences from videos and images
 Its main use is to create a set of unique colors from an image and then
 sort the colors according to the selected sorting method.
 
-# Installation
+## Installation
 
 You can simply pip install this package:
 
@@ -13,7 +13,7 @@ You can simply pip install this package:
 pip install pyrolld
 ```
 
-# Usage
+## Usage
 
 Here is an example:
 
@@ -40,3 +40,44 @@ rolled = image.roll(sorter="LUM")
 
 rolled.show()
 ```
+
+
+## Example
+
+Here is an example. We are going to use the image `lena.png`:
+
+<img src="./assets/images/lena.png" width="250" height="250">
+
+And with this code we will "roll" the image:
+
+```python
+from rolld import Roller
+
+
+filepath = "lena.png"
+roller = Roller(filepath)
+
+sorters = ["HSV", "HSL", "YIQ", "LUM"]
+for sorter in sorters:
+    image = roller.roll(sorter=sorter)
+    image.show()
+
+```
+
+Here is the output of all the sorting methods:
+
+### Luminance
+
+<img src="./assets/images/lena_lum.png">
+
+### YIQ
+
+<img src="./assets/images/lena_yiq.png">
+
+### HSV
+
+<img src="./assets/images/lena_hsv.png">
+
+### HSL
+
+<img src="./assets/images/lena_hsl.png">
