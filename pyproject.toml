@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pyrolld"
+version = "0.1.0"
+description = "A package to generate color sequences from videos and images"
+authors = ["Vitaman02"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include = "rolld"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+pillow = "^9.0"
+types-pillow = "^9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+flake8 = "^6.0.0"
+isort = "^5.11.4"
+pre-commit = "^3.0.0"
+mypy = "^0.991"
+tox = "^4.4.2"
+pytest = "^7"
+coverage = "^7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,12 @@
+# VSCode settings
+.vscode/
+
+# Python
+__pycache__/
+dist/
+build/
+*.egg-info/
+.python-version
+
+# Tests
+.coverage
