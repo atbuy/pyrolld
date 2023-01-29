@@ -28,7 +28,7 @@ rolled = image.roll()
 rolled.show()
 ```
 
-You can also chose between 3 different sorting methods `["HSV", "HSL", "LUM"]`:
+You can also chose between 3 different sorting methods `["HSV", "HSL", "YIQ", "LUM"]`:
 
 ```python
 from rolld import Roller
@@ -46,7 +46,7 @@ rolled.show()
 
 Here is an example. We are going to use the image `lena.png`:
 
-<img src="./assets/images/lena.png" width="250" height="250">
+<img src="https://raw.githubusercontent.com/Vitaman02/pyrolld/main/assets/images/lena.png" width="250" height="250">
 
 And with this code we will "roll" the image:
 
@@ -68,16 +68,16 @@ Here is the output of all the sorting methods:
 
 ### Luminance
 
-<img src="./assets/images/lena_lum.png">
+<img src="https://raw.githubusercontent.com/Vitaman02/pyrolld/main/assets/images/lena_lum.png">
 
 ### YIQ
 
-<img src="./assets/images/lena_yiq.png">
+<img src="https://raw.githubusercontent.com/Vitaman02/pyrolld/main/assets/images/lena_yiq.png">
 
 ### HSV
 
-<img src="./assets/images/lena_hsv.png">
+<img src="https://raw.githubusercontent.com/Vitaman02/pyrolld/main/assets/images/lena_hsv.png">
 
 ### HSL
 
-<img src="./assets/images/lena_hsl.png">
+<img src="https://raw.githubusercontent.com/Vitaman02/pyrolld/main/assets/images/lena_hsl.png">
