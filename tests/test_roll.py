@@ -37,6 +37,20 @@ class RollTest(TestCase):
 
         self.assertEqual(image.size, (9, 100))
 
+        pixel_blue = image.getpixel((0, 50))
+        pixel_red = image.getpixel((2, 50))
+        pixel_green = image.getpixel((8, 50))
+
+        self.assertEqual(pixel_red, (255, 0, 0))
+        self.assertEqual(pixel_green, (0, 255, 0))
+        self.assertEqual(pixel_blue, (0, 0, 255))
+
+    def test_sorter_hsv(self):
+        """Test HSV sorter"""
+
+        mock = mock_image(STACKED)
+        image = Roller(mock).roll(sorter="HSV")
+
         pixel_red = image.getpixel((0, 50))
         pixel_green = image.getpixel((4, 50))
         pixel_blue = image.getpixel((8, 50))
@@ -54,6 +68,20 @@ class RollTest(TestCase):
         pixel_red = image.getpixel((0, 50))
         pixel_green = image.getpixel((4, 50))
         pixel_blue = image.getpixel((8, 50))
+
+        self.assertEqual(pixel_red, (255, 0, 0))
+        self.assertEqual(pixel_green, (0, 255, 0))
+        self.assertEqual(pixel_blue, (0, 0, 255))
+
+    def test_sorter_yiq(self):
+        """Test YIQ sorter"""
+
+        mock = mock_image(STACKED)
+        image = Roller(mock).roll(sorter="YIQ")
+
+        pixel_blue = image.getpixel((0, 50))
+        pixel_red = image.getpixel((2, 50))
+        pixel_green = image.getpixel((8, 50))
 
         self.assertEqual(pixel_red, (255, 0, 0))
         self.assertEqual(pixel_green, (0, 255, 0))
